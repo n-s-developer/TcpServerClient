@@ -5,7 +5,7 @@ ServerCls::ServerCls()
 
 }
 
-bool ServerCls::StartServer(std::string ip, int port)
+bool ServerCls::StartServer(int port)
 {
 
     // Winsock'i başlat
@@ -25,7 +25,20 @@ bool ServerCls::StartServer(std::string ip, int port)
     // Sunucu adresini yapılandır
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
-    serverAddr.sin_addr.s_addr = std::stoul(ip); // Herhangi bir IP adresi
+    serverAddr.sin_addr.s_addr = INADDR_ANY; // Herhangi bir IP adresi
+
+    return true;
+}
+
+bool ServerCls::BindServer()
+{
+    // Sunucu soketini bağla
+    if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
+        // std::cerr << "Bind hatası!" << std::endl;
+        closesocket(serverSocket);
+        WSACleanup();
+        return false;
+    }
 
     return true;
 }

@@ -5,7 +5,8 @@
 
 class ServerIfc
 {
-    virtual bool StartServer(std::string ip, int port) = 0;
+    virtual bool StartServer(int port) = 0;
+    virtual bool BindServer() = 0;
 };
 
 #endif // SERVERIFC_H

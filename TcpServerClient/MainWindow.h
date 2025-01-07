@@ -22,6 +22,8 @@ public:
 private slots:
     void on_PushButtonStartServer_clicked();
 
+    void on_PushButtonBindServer_clicked();
+
 private:
     Ui::MainWindow *ui;
     ServerCls server;
