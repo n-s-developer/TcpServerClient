@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>982</width>
     <height>600</height>
    </rect>
   </property>
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="PushButtonStartServer">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
+      <x>10</x>
+      <y>90</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>120</y>
+      <x>10</x>
+      <y>10</y>
       <width>141</width>
       <height>16</height>
      </rect>
@@ -48,8 +48,8 @@
    <widget class="QLineEdit" name="LineEditServerPort">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>140</y>
+      <x>10</x>
+      <y>30</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -61,11 +61,14 @@
    <widget class="QLabel" name="labelResult">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>330</y>
+      <x>670</x>
+      <y>30</y>
       <width>231</width>
       <height>81</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::Box</enum>
     </property>
     <property name="text">
      <string/>
@@ -74,8 +77,8 @@
    <widget class="QPushButton" name="PushButtonBindServer">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>40</y>
+      <x>170</x>
+      <y>90</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -84,13 +87,214 @@
      <string>Bind Server</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="LineEditServerBindingIp">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>127.1.1.1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>SERVER BINDING IP ADDR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonStartListening">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>90</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Listening</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditServerMsg">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>470</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditClientMsg">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>470</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowserServerScreen">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowserClientScreen">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>260</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SERVER: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>210</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CLIENT: </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonStartClient">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Client</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonConnectToServer">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect To Server</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonStartListening_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>150</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Receive From Server</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonCloseClient">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>150</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close Client</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonCloseServer">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>90</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close Server</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonSendServerMsg">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>470</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SEND</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PushButtonSendClientMsg">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>470</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SEND</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>982</width>
      <height>22</height>
     </rect>
    </property>

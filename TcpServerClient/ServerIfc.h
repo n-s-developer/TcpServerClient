@@ -5,8 +5,12 @@
 
 class ServerIfc
 {
-    virtual bool StartServer(int port) = 0;
-    virtual bool BindServer() = 0;
+public:
+    virtual bool Start(int port, std::string ip) = 0;
+    virtual bool Bind() = 0;
+    virtual bool Listen() = 0;
+    virtual void Close() = 0;
+    virtual bool SendMsg (std::string msg) = 0;
 };
 
 #endif // SERVERIFC_H
